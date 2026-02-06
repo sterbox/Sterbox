@@ -4,17 +4,26 @@ body {
   flex-direction: row; /* agora é lado a lado */
   min-height: 100vh;
   align-items: stretch;
-  justify-content: space-between;
-
+  justify-content: flex-start;
+  gap: 20px; /* opcional: define um pequeno espaço entre header e main */
+  
   font-family: Arial, sans-serif; /* <- adiciona esta linha */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding: 1rem;
 }
 
 /* Header vira aba lateral direita */
 header {
   width: 320px; /* largura da aba */
-  height: 85vh;
+  height: 50vh;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 10rem 1.5rem;
   background-color: #0d47a1;
   color: white;
 
@@ -30,7 +39,7 @@ main {
   justify-content: center;
   align-items: center;
   width: auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Model viewer ajustado */
@@ -45,7 +54,10 @@ model-viewer {
 
 /* Footer deixa de fazer sentido em baixo (podes ocultar) */
 footer {
-  display: none;
+  display: block;
+  margin-top: auto; /* empurra o footer para o final do header */
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .logo {
