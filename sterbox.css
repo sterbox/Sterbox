@@ -1,57 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
   background-color: #f5f5f5;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* agora é lado a lado */
   min-height: 100vh;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
+
+  font-family: Arial, sans-serif; /* <- adiciona esta linha */
 }
 
+/* Header vira aba lateral direita */
 header {
+  width: 320px; /* largura da aba */
+  height: 100vh;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   background-color: #0d47a1;
   color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1rem;
-}
-
+/* Conteúdo 3D fica à esquerda */
 main {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
+  padding: 2rem;
 }
 
+/* Model viewer ajustado */
 model-viewer {
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 900px;
   height: 600px;
   background-color: #e0e0e0;
   border-radius: 16px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+/* Footer deixa de fazer sentido em baixo (podes ocultar) */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #0d47a1;
-  color: white;
+  display: none;
 }
 
 .logo {
@@ -65,3 +59,4 @@ footer {
   height: 120px;
   width: auto;
 }
+
